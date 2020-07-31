@@ -23,6 +23,7 @@
   --background-services: rgba(47, 48, 58, 0.8);
   --backgroung-hero: rgba(47, 48, 58, 0.8);
   --background-overlay: rgba(33, 150, 243, 0.9);
+  --sprite-color: #afb1b8;
 }
 
 html {
@@ -146,7 +147,7 @@ body {
 }
 
 .header-icon-mail-svg {
-  --color3: var(--primary-text-color);
+  fill: var(--sprite-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 16px;
   height: 11px;
@@ -154,7 +155,7 @@ body {
 }
 
 .header-icon-phone-svg {
-  --color5: var(--primary-text-color);
+  fill: var(--sprite-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 10px;
   height: 15px;
@@ -165,8 +166,8 @@ body {
 .nav-contacts-item:hover .header-icon-phone-svg,
 .nav-contacts-link:focus .header-icon-mail-svg,
 .nav-contacts-link:focus .header-icon-phone-svg {
-  --color3: var(--accent-color);
-  --color5: var(--accent-color);
+  fill: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .main-page::after {
@@ -197,7 +198,7 @@ body {
 .footer .nav-contacts-link:focus,
 .footer .nav-contacts-link:hover {
   background-color: var(--accent-color);
-  --color1: var(--primary-white-color);
+  fill: var(--sprite-color);
 }
 
 .nav-contacts {
@@ -434,10 +435,20 @@ body {
   top: 2139px;
 }
 
+.social-team-item .social-img {
+  fill: var(--sprite-color);
+}
+
 .social-img {
+  fill: var(--primary-white-color);
   display: block;
   width: 20px;
   height: 20px;
+}
+
+.nav-contacts-link:hover .social-img,
+.nav-contacts-link:focus .social-img {
+  fill: var(--primary-white-color);
 }
 
 .social-team-list-links .social-team-item:not(:last-child) {
@@ -490,16 +501,17 @@ body {
   border: 1px solid var(--backgroung-second);
   box-sizing: border-box;
   border-radius: 4px;
-  transition: border 3000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-svg {
-  transition: fill 3000ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--sprite-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover .clients-svg,
 .clients-link:focus .clients-svg {
-  --color1: var(--accent-color);
+  fill: var(--accent-color);
 }
 .clients-link:hover,
 .clients-link:focus {
@@ -596,6 +608,7 @@ body {
 }
 
 .icon-send-svg {
+  fill: var(--primary-white-color);
   margin-left: 10px;
 }
 
